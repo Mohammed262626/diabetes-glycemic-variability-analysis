@@ -1,0 +1,56 @@
+==============================================================================
+                ADVANCED BIOSTATISTICAL ANALYSIS REPORT                      
+==============================================================================
+Total Cohort Size : 70 Patients
+Total Observations: 11423 Cleaned Glucose Records
+==============================================================================
+
+TEST 1: GLOBAL VARIANCE ASSESSMENT (ONE-WAY ANOVA)
+------------------------------------------------------------------------------
+F-Statistic: 46.3663
+p-Value    : 1.9301e-56
+Significance: Significant (p<0.05)
+
+TEST 2: PAIRWISE DIFFERENCE MATRIX (TUKEY HSD POST-HOC)
+------------------------------------------------------------------------------
+          Multiple Comparison of Means - Tukey HSD, FWER=0.05          
+=======================================================================
+    group1         group2     meandiff p-adj    lower    upper   reject
+-----------------------------------------------------------------------
+  Post-bedtime Post-breakfast  21.9234    0.0   13.2358  30.6111   True
+  Post-bedtime    Post-dinner   7.6053 0.1412    -1.183  16.3936  False
+  Post-bedtime     Post-lunch  -5.2082  0.602  -14.1332   3.7169  False
+  Post-bedtime  Pre-breakfast   11.514 0.0259    0.7934  22.2346   True
+  Post-bedtime     Pre-dinner   95.743    0.0   66.0362 125.4498   True
+  Post-bedtime      Pre-lunch  29.5779 0.6456   -23.092  82.2478  False
+Post-breakfast    Post-dinner -14.3181    0.0  -20.0293  -8.6069   True
+Post-breakfast     Post-lunch -27.1316    0.0  -33.0511 -21.2122   True
+Post-breakfast  Pre-breakfast -10.4094 0.0047  -18.7948   -2.024   True
+Post-breakfast     Pre-dinner  73.8196    0.0   44.8735 102.7657   True
+Post-breakfast      Pre-lunch   7.6544 0.9995  -44.5902  59.8991  False
+   Post-dinner     Post-lunch -12.8135    0.0  -18.8797  -6.7473   True
+   Post-dinner  Pre-breakfast   3.9087 0.8242   -4.5809  12.3983  False
+   Post-dinner     Pre-dinner  88.1377    0.0   59.1612 117.1142   True
+   Post-dinner      Pre-lunch  21.9725 0.8786  -30.2889   74.234  False
+    Post-lunch  Pre-breakfast  16.7222    0.0    8.0911  25.3533   True
+    Post-lunch     Pre-dinner 100.9512    0.0    71.933 129.9694   True
+    Post-lunch      Pre-lunch  34.7861 0.4392  -17.4986  87.0707  False
+ Pre-breakfast     Pre-dinner   84.229    0.0   54.6092 113.8488   True
+ Pre-breakfast      Pre-lunch  18.0639 0.9514  -34.5571  70.6848  False
+    Pre-dinner      Pre-lunch -66.1652 0.0179 -125.6338  -6.6965   True
+-----------------------------------------------------------------------
+
+==============================================================================
+
+TEST 3: DEPENDENT SAMPLES ASSESSMENT (PAIRED T-TEST)
+------------------------------------------------------------------------------
+Objective: Evaluate physiological glucose shift from Pre-Breakfast to Post-Breakfast
+           within individual patients on the exact same recording dates.
+Total matched paired dates isolated across cohort: 300
+Mean Glycemic Shift  : +33.88 mg/dL
+Calculated t-Value   : -4.2927
+Two-Tailed p-Value   : 2.3875e-05
+Interpretation       : Statistically Significant (p<0.05)
+Conclusion           : Reject the null hypothesis. Post-prandial metabolization
+                       causes a distinct, quantifiable shift in glycemic tracking.
+==============================================================================

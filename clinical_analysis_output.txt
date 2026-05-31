@@ -1,0 +1,52 @@
+==============================================================================
+                 CLINICAL DATA ANALYSIS REPORT: GLYCEMIC VARIABILITY          
+==============================================================================
+Dataset Origin           : UCI Diabetes Dataset Archive
+Total Cohort Size        : 70 Patients
+Total Combined Observations: 29278 patient log entries
+Isolated Glucose Metrics : 13523 readings
+==============================================================================
+
+SECTION 1: COHORT OVERVIEW (Top 10 Log-Contributed Profiles)
+------------------------------------------------------------------------------
+patient_id
+Patient_55    1327
+Patient_29    1249
+Patient_30    1179
+Patient_65    1126
+Patient_56    1018
+Patient_20    1003
+Patient_67     967
+Patient_28     951
+Patient_01     943
+Patient_27     922
+
+==============================================================================
+
+SECTION 2: DESCRIPTIVE STATISTICS BY CLINICAL MEASUREMENT WINDOW
+------------------------------------------------------------------------------
+                           count        mean         std   min    max
+time_of_day                                                          
+Pre-breakfast Glucose        989  160.286148   98.904843  19.0  501.0
+Post-breakfast Glucose      3518  170.695566   77.737178  23.0  461.0
+Pre-lunch Glucose             20  178.350000   81.883277  49.0  339.0
+Post-lunch Glucose          2768  143.563945   74.558614  15.0  452.0
+Pre-dinner Glucose            66  244.515152  104.364633  25.0  476.0
+Post-dinner Glucose         3158  156.377454   74.099831  28.0  450.0
+Pre-snack Glucose            219  186.150685   92.158122  37.0  413.0
+Post-bedtime Glucose         904  148.772124   86.731948   0.0  461.0
+Unspecified Blood Glucose   1881  171.123339   78.570349  28.0  487.0
+
+==============================================================================
+
+SECTION 3: INFERENTIAL STATISTICS (ONE-WAY ANOVA)
+------------------------------------------------------------------------------
+Hypothesis Testing: Evaluating significant variance between time-of-day cohorts.
+F-Statistic : 43.1781
+p-Value     : 6.9744e-69
+
+Interpretation:
+Result: Statistically Significant (p < 0.05).
+Conclusion: The mean blood glucose values significantly differ based on the
+            clinical timeline assessment window. Reject the null hypothesis.
+==============================================================================
